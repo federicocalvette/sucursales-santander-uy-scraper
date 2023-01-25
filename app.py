@@ -13,3 +13,7 @@ async def create_item(req: Request):
     response = init_scrapper.run()
 
     return JSONResponse(response)
+
+@app.get("/")
+async def root():
+    return {"message": "Go to: http://127.0.0.1:8000/docs"}
