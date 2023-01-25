@@ -1,4 +1,4 @@
-# sucursales-santander-uy-scrapper
+# sucursales-santander-uy-scraper
 -------------------------------------------
 
 ## Run with: 
