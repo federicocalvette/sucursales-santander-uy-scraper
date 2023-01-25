@@ -1,7 +1,8 @@
+from fastapi.responses import JSONResponse
 from fastapi import FastAPI, Request
 import bank_scrapper
-import json
-from fastapi.responses import JSONResponse
+import settings
+
 
 app = FastAPI()
 
@@ -16,4 +17,11 @@ async def create_item(req: Request):
 
 @app.get("/")
 async def root():
-    return {"message": "Go to: http://127.0.0.1:8000/docs"}
+
+    data = {
+        "links":{
+            "documentation": f"{settings.BASE_PROJECT_URL}/docs",
+            "branchScrapper": f"{settings.BASE_PROJECT_URL}/santander/sucursales"
+        }
+    }
+    return data
