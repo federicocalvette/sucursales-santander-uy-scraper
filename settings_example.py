@@ -1,0 +1,1 @@
+WEB_URL = 'https://www.santander.com.uy/services/sucursales/list'
